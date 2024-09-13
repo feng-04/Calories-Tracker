@@ -2,10 +2,15 @@ import requests
 import sqlite3
 import datetime as dt
 import bcrypt as bc
+import os
+from dotenv import load_dotenv
 
+
+# loading envrionment variable 
+load_dotenv("Path to the .env file goes here")
+api_key = os.getenv('api-key')
 
 # api request to get calories data
-api_key =  '4cb53b6c39d39d0b16ea3df4f90c82be'
 application_id = '34ac556c'
 url = 'https://trackapi.nutritionix.com/v2/natural/nutrients'
 header = {
