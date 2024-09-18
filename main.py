@@ -39,7 +39,7 @@ def personal_info(date, username, password):
             if gender.lower() in ('male','female'):
                 break
         except ValueError:
-            print("Please enter a valid weight")
+            print("Please enter a valid number")
     if gender.lower() == 'male':
         calories = (9.65 * weight) + (573 * height / 100) - (5.08 * age) + 260
     elif gender.lower() == 'female':
